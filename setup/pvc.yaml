@@ -5,10 +5,10 @@ metadata:
 spec:
   storageClassName: rook-cephfs
   accessModes:
-    - ReadWriteMany
+  - ReadWriteMany
   resources:
     requests:
-      storage: 10Gi
+      storage: 50G
 ---
 apiVersion: v1
 kind: PersistentVolumeClaim
@@ -17,8 +17,7 @@ metadata:
 spec:
   storageClassName: rook-cephfs
   accessModes:
-    - ReadWriteMany
+  - ReadWriteMany
   resources:
     requests:
-      storage: 5Gi
-
+      storage: 5G      

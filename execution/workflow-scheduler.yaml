@@ -7,7 +7,6 @@ metadata:
     tier: control-plane
   name: workflow-scheduler
 spec:
-  nodeName: minikube
   containers:
   - env:
     - name: SCHEDULER_NAME
