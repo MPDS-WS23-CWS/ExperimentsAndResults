@@ -4,7 +4,6 @@ kind: Pod
 metadata:
   name: management
 spec:
-  nodeName: minikube
   containers:
   - name: management
     image: ubuntu

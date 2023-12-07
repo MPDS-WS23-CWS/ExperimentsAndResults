@@ -4,7 +4,7 @@ namespace="cws"
 kubectl create namespace $namespace
 kubectl label nodes minikube cwsscheduler=true
 kubectl label nodes minikube-m02 minikube-m03 minikube-m04 cwsexperiment=true
-kubectl apply -f setup/pvc.yaml --namespace $namespace
+#kubectl apply -f ../../ProvenanceEngine/cluster-config/pvc.yaml --namespace $namespace
 kubectl apply -f setup/management.yaml --namespace $namespace
 kubectl wait --for=condition=ready pod management --namespace $namespace
 
