@@ -7,7 +7,6 @@ metadata:
     tier: control-plane
   name: workflow-scheduler
 spec:
-  nodeName: minikube
   containers:
   - env:
     - name: SCHEDULER_NAME
@@ -29,15 +28,15 @@ spec:
       name: vol-1
     - mountPath: /data
       name: vol-2
-  #nodeSelector: 
-  #  cwsscheduler: 'true'
+  nodeSelector: 
+    cwsscheduler: 'true'
   securityContext:
     runAsUser: 0
   serviceAccount: nextflowscheduleraccount
   volumes:
   - name: vol-1
     persistentVolumeClaim:
-      claimName: nfs-pvc
+      claimName: api-exp-input
   - name: vol-2
     persistentVolumeClaim:
-      claimName: nfs-pvc
+      claimName: api-exp-data

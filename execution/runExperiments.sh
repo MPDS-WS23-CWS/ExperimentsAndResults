@@ -1,5 +1,5 @@
 #!/bin/bash
-workflows=( rnaseq )
+workflows=( sarek )
 prios=( fifo )
 assigns=( random )
 pod="management"
@@ -43,7 +43,7 @@ do
         profile="test_nobc_nodx_rnamod"
     fi
 
-    while [ $trial -ne 2 ]
+    while [ $trial -ne 6 ]
     do
         mkdir $cluster
         strategy="original"
