@@ -23,6 +23,7 @@ kubectl create -f ../ProvenanceEngine/MetricScraper/minimal_setup/node-exporter/
 kubectl create -f ../ProvenanceEngine/MetricScraper/minimal_setup/node-exporter/service.yaml
 
 # setup pgSQL & pgREST
+
 #kubectl apply -f ../ProvenanceEngine/database/pgSQL/db-persistent-volume.yaml --namespace $namespace2
 #kubectl apply -f ../ProvenanceEngine/database/pgSQL/db-volume-claim.yaml --namespace $namespace2
 #kubectl apply -f ../ProvenanceEngine/database/pgSQL/db-configmap.yaml --namespace $namespace2
@@ -58,6 +59,19 @@ kubectl apply -f setup/accounts.yaml --namespace $namespace
 # label cluster-nodes
 kubectl label nodes minikube cwsscheduler=true
 kubectl label nodes minikube-m02 minikube-m03 minikube-m04 cwsexperiment=true
+
+# enable port-forwarding for the client app to fetch metrics
+#prometheus_deployment=$(kubectl get deployments -l app=prometheus -o custom-columns=DEPLOYMENT:.metadata.name,NAMESPACE:.metadata.namespace --no-headers | grep - E '^prometheus\s' | awk '{print $2'}
+
+#if [ -z "$prometheus_deployment" ]; then
+#	echo "Prometheus deployment not found."
+#	exit 1
+#fi
+
+#local_port=9090
+#kubectl port-forward deployment/$prometheus_deployment $local_port:9090 -n $namespace &
+#port_forward_pid=$!
+#echo "Prometheus port-forwarding is running in the background. Press Ctrl+C to stop."
 
 # if you face any problems, run this manually in the pod.
 kubectl exec  --namespace $namespace management -- /bin/bash /input/commands.sh
