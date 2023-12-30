@@ -1,8 +1,10 @@
 #!/bin/bash
 namespace="cws"
-namespace2="default"
+namespace2="database"
+
 # setup of cws related stuff
 kubectl create namespace $namespace
+kubectl create namespace $namespace2
 kubectl apply -f setup/pv.yaml --namespace $namespace
 kubectl apply -f setup/pvc.yaml --namespace $namespace
 kubectl apply -f setup/management.yaml --namespace $namespace
@@ -24,18 +26,19 @@ kubectl create -f ../ProvenanceEngine/MetricScraper/minimal_setup/node-exporter/
 
 # setup pgSQL & pgREST
 
-#kubectl apply -f ../ProvenanceEngine/database/pgSQL/db-persistent-volume.yaml --namespace $namespace2
-#kubectl apply -f ../ProvenanceEngine/database/pgSQL/db-volume-claim.yaml --namespace $namespace2
-#kubectl apply -f ../ProvenanceEngine/database/pgSQL/db-configmap.yaml --namespace $namespace2
-#kubectl apply -f ../ProvenanceEngine/database/pgSQL/db-deployment.yaml --namespace $namespace2
-#kubectl apply -f ../ProvenanceEngine/database/pgSQL/db-service.yaml --namespace $namespace2
+kubectl apply -f ../ProvenanceEngine/database/pgSQL/db-persistent-volume.yaml --namespace $namespace2
+kubectl apply -f ../ProvenanceEngine/database/pgSQL/db-volume-claim.yaml --namespace $namespace2
+kubectl apply -f ../ProvenanceEngine/database/pgSQL/db-configmap.yaml --namespace $namespace2
+kubectl apply -f ../ProvenanceEngine/database/pgSQL/db-deployment.yaml --namespace $namespace2
+kubectl apply -f ../ProvenanceEngine/database/pgSQL/db-service.yaml --namespace $namespace2
 
 #echo -e "------database service and pods started------\n"
 
-#kubectl apply -f ../ProvenanceEnginedatabase/pgREST/postgrest-deployment.yaml --namespace $namespace2
-#kubectl apply -f ../ProvenanceEngine/database/pgREST/postgrest-service.yaml --namespace $namespace2
+kubectl apply -f ../ProvenanceEngine/database/pgREST/postgrest-deployment.yaml --namespace $namespace2
+kubectl apply -f ../ProvenanceEngine/database/pgREST/postgrest-service.yaml --namespace $namespace2
 
-#echo -e "------postGREST service and pods started------ \n"
+echo -e "------postGREST service and pods started------ \n"
+
 # load input data sets in cws-namespace onto management pod
 
 #kubectl cp inputs/rnaseq $namespace/management:/input/
@@ -61,17 +64,10 @@ kubectl label nodes minikube cwsscheduler=true
 kubectl label nodes minikube-m02 minikube-m03 minikube-m04 cwsexperiment=true
 
 # enable port-forwarding for the client app to fetch metrics
-#prometheus_deployment=$(kubectl get deployments -l app=prometheus -o custom-columns=DEPLOYMENT:.metadata.name,NAMESPACE:.metadata.namespace --no-headers | grep - E '^prometheus\s' | awk '{print $2'}
-
-#if [ -z "$prometheus_deployment" ]; then
-#	echo "Prometheus deployment not found."
-#	exit 1
-#fi
-
 #local_port=9090
-#kubectl port-forward deployment/$prometheus_deployment $local_port:9090 -n $namespace &
-#port_forward_pid=$!
-#echo "Prometheus port-forwarding is running in the background. Press Ctrl+C to stop."
+#prometheus_pod=$(kubectl get pods --namespace monitoring -l "app=prometheus,component=server" -o jsonpath="{.items[0].metadata.name}")
+#kubectl port-forward $prometheus_pod $local_port:9090 --namespace monitoring &> /dev/null &
+#echo "Prometheus UI is now accessible at http://localhost:$local_port"
 
 # if you face any problems, run this manually in the pod.
-kubectl exec  --namespace $namespace management -- /bin/bash /input/commands.sh
+#kubectl exec  --namespace $namespace management -- /bin/bash /input/commands.sh
