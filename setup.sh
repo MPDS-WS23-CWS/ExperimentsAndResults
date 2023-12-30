@@ -47,7 +47,7 @@ echo -e "------postGREST service and pods started------ \n"
 
 # load input data sets in cws-namespace onto management pod
 
-kubectl cp inputs/rnaseq $namespace/management:/input/
+#kubectl cp inputs/rnaseq $namespace/management:/input/
 kubectl cp inputs/sarek $namespace/management:/input/
 #kubectl cp inputs/chipseq $namespace/management:/input/
 #kubectl cp inputs/atacseq $namespace/management:/input/
