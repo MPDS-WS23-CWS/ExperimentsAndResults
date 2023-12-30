@@ -1,7 +1,10 @@
 #!/bin/bash
-workflows=( sarek )
+# workflows=( rnaseq atacseq chipseq ampliseq mag viralrecon nanoseq sarek eager )
+workflows=( rnaseq )
+# prios=( fifo rank random max min rank_max rank_min )
 prios=( fifo )
-assigns=( random )
+# assigns=( random roundrobin fair )
+assigns=( roundrobin )
 pod="management"
 cluster=$1
 namespace="cws"
@@ -43,7 +46,8 @@ do
         profile="test_nobc_nodx_rnamod"
     fi
 
-    while [ $trial -ne 6 ]
+    # while [ $trial -ne 6 ]
+    while [ $trial -ne 2 ]
     do
         mkdir $cluster
         strategy="original"

@@ -41,7 +41,7 @@ echo -e "------postGREST service and pods started------ \n"
 
 # load input data sets in cws-namespace onto management pod
 
-#kubectl cp inputs/rnaseq $namespace/management:/input/
+kubectl cp inputs/rnaseq $namespace/management:/input/
 kubectl cp inputs/sarek $namespace/management:/input/
 #kubectl cp inputs/chipseq $namespace/management:/input/
 #kubectl cp inputs/atacseq $namespace/management:/input/
@@ -51,7 +51,7 @@ kubectl cp inputs/sarek $namespace/management:/input/
 #kubectl cp inputs/viralrecon $namespace/management:/input/
 #kubectl cp inputs/eager $namespace/management:/input/
 
-kubectl cp setup/nanoseqPatch.diff $namespace/management:/input/
+#kubectl cp setup/nanoseqPatch.diff $namespace/management:/input/
 
 # run commands.sh on management pod
 kubectl cp setup/commands.sh $namespace/management:/input/
@@ -70,4 +70,4 @@ kubectl label nodes minikube-m02 minikube-m03 minikube-m04 cwsexperiment=true
 #echo "Prometheus UI is now accessible at http://localhost:$local_port"
 
 # if you face any problems, run this manually in the pod.
-#kubectl exec  --namespace $namespace management -- /bin/bash /input/commands.sh
+kubectl exec  --namespace $namespace management -- /bin/bash /input/commands.sh
