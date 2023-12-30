@@ -37,6 +37,12 @@ kubectl apply -f ../ProvenanceEngine/database/pgSQL/db-service.yaml --namespace 
 kubectl apply -f ../ProvenanceEngine/database/pgREST/postgrest-deployment.yaml --namespace $namespace2
 kubectl apply -f ../ProvenanceEngine/database/pgREST/postgrest-service.yaml --namespace $namespace2
 
+# Discover pgSQL pod and enable port-forwarding
+#POD_NAME=$(kubectl get pods -l app=postgres -o jsonpath='{.items[0].metadata.name}')
+
+# Perform port forwarding
+#kubectl port-forward "pod/$POD_NAME" 5432:5432
+
 echo -e "------postGREST service and pods started------ \n"
 
 # load input data sets in cws-namespace onto management pod
