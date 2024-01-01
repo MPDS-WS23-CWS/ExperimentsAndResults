@@ -49,10 +49,10 @@ echo -e "------postGREST service and pods started------ \n"
 
 #kubectl cp inputs/rnaseq $namespace/management:/input/
 kubectl cp inputs/sarek $namespace/management:/input/
-kubectl cp inputs/chipseq $namespace/management:/input/
+#kubectl cp inputs/chipseq $namespace/management:/input/
 #kubectl cp inputs/atacseq $namespace/management:/input/
 #kubectl cp inputs/mag $namespace/management:/input/
-#kubectl cp inputs/ampliseq $namespace/management:/input/
+kubectl cp inputs/ampliseq $namespace/management:/input/
 #kubectl cp inputs/nanoseq $namespace/management:/input/
 #kubectl cp inputs/viralrecon $namespace/management:/input/
 #kubectl cp inputs/eager $namespace/management:/input/
