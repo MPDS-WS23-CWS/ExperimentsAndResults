@@ -1,6 +1,6 @@
 #!/bin/bash
 # workflows=( rnaseq atacseq chipseq ampliseq mag viralrecon nanoseq sarek eager )
-workflows=( rnaseq sarek chipseq )
+workflows=( sarek chipseq )
 # prios=( fifo rank random max min rank_max rank_min )
 prios=( fifo )
 # assigns=( random roundrobin fair )
