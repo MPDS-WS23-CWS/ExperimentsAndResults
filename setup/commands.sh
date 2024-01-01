@@ -9,17 +9,17 @@ git clone https://github.com/nf-core/rnaseq.git > /dev/null
 cd rnaseq
 git checkout e049f51f0214b2aef7624b9dd496a404a7c34d14 2> /dev/null
 
-#echo "Download sarek (2/9)"
-#cd /input/pipelines
-#git clone https://github.com/nf-core/sarek.git > /dev/null
-#cd sarek
-#git checkout bcd7bf9cb98cddec27bb54fb47ee122c09388c02 2> /dev/null
+echo "Download sarek (2/9)"
+cd /input/pipelines
+git clone https://github.com/nf-core/sarek.git > /dev/null
+cd sarek
+git checkout bcd7bf9cb98cddec27bb54fb47ee122c09388c02 2> /dev/null
 
-#echo "Download chipseq (3/9)"
-#cd /input/pipelines
-#git clone https://github.com/nf-core/chipseq.git > /dev/null
-#cd chipseq
-#git checkout 51eba00b32885c4d0bec60db3cb0a45eb61e34c5 2> /dev/null
+echo "Download chipseq (3/9)"
+cd /input/pipelines
+git clone https://github.com/nf-core/chipseq.git > /dev/null
+cd chipseq
+git checkout 51eba00b32885c4d0bec60db3cb0a45eb61e34c5 2> /dev/null
 
 #echo "Download atacseq (4/9)"
 #cd /input/pipelines
@@ -63,12 +63,12 @@ git checkout e049f51f0214b2aef7624b9dd496a404a7c34d14 2> /dev/null
 echo "Fetch data for: rnaseq (1/9)"
 cd /input/rnaseq/
 bash fetchData.sh > /dev/null
-#echo "Fetch data for: sarek (2/9)"
-#cd /input/sarek/
-#bash fetchData.sh > /dev/null
-#echo "Fetch data for: chipseq (3/9)"
-#cd /input/chipseq/
-#bash fetchData.sh > /dev/null
+echo "Fetch data for: sarek (2/9)"
+cd /input/sarek/
+bash fetchData.sh > /dev/null
+echo "Fetch data for: chipseq (3/9)"
+cd /input/chipseq/
+bash fetchData.sh > /dev/null
 #echo "Fetch data for: atacseq (4/9)"
 #cd /input/atacseq/
 #bash fetchData.sh > /dev/null
