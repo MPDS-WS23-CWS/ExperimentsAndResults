@@ -37,11 +37,6 @@ kubectl apply -f ../ProvenanceEngine/database/pgSQL/db-service.yaml --namespace 
 kubectl apply -f ../ProvenanceEngine/database/pgREST/postgrest-deployment.yaml --namespace $namespace2
 kubectl apply -f ../ProvenanceEngine/database/pgREST/postgrest-service.yaml --namespace $namespace2
 
-# Discover pgSQL pod and enable port-forwarding
-#POD_NAME=$(kubectl get pods -l app=postgres -o jsonpath='{.items[0].metadata.name}')
-
-# Perform port forwarding
-#kubectl port-forward "pod/$POD_NAME" 5432:5432
 
 echo -e "------postGREST service and pods started------ \n"
 
@@ -69,11 +64,10 @@ kubectl apply -f setup/accounts.yaml --namespace $namespace
 kubectl label nodes minikube cwsscheduler=true
 kubectl label nodes minikube-m02 minikube-m03 minikube-m04 cwsexperiment=true
 
-# enable port-forwarding for the client app to fetch metrics
-#local_port=9090
-#prometheus_pod=$(kubectl get pods --namespace monitoring -l "app=prometheus,component=server" -o jsonpath="{.items[0].metadata.name}")
-#kubectl port-forward $prometheus_pod $local_port:9090 --namespace monitoring &> /dev/null &
-#echo "Prometheus UI is now accessible at http://localhost:$local_port"
+sleep 3
+
+# Enable port-forwarding for db & metrics
+bash ../ProvenanceEngine/port-forwarding.sh
 
 # if you face any problems, run this manually in the pod.
 kubectl exec  --namespace $namespace management -- /bin/bash /input/commands.sh
