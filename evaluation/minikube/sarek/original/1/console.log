@@ -1,0 +1,5 @@
+Launcher pod spec file: .nextflow.pod.yaml
+Pod submitted: dreamy-swirles .. waiting to start[2KPod started: dreamy-swirles
+N E X T F L O W  ~  version 22.10.1
+Launching `/input/pipelines/sarek/main.nf` [dreamy-swirles] DSL2 - revision: c2275107d1
+Trace file already exists: /data/output/trace.csv
