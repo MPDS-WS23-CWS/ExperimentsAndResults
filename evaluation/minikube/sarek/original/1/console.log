@@ -1,0 +1,5 @@
+Launcher pod spec file: .nextflow.pod.yaml
+Pod submitted: desperate-pesquet .. waiting to start[2KPod started: desperate-pesquet
+N E X T F L O W  ~  version 22.10.1
+Launching `/input/pipelines/sarek/main.nf` [desperate-pesquet] DSL2 - revision: c2275107d1
+Trace file already exists: /data/output/trace.csv

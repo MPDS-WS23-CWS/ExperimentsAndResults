@@ -1,0 +1,13 @@
+Jan-03 18:28:02.230 [main] DEBUG nextflow.cli.Launcher - $> nextflow kuberun /input/pipelines/atacseq/ -v 'api-exp-data:/data' -v 'api-exp-input:/input' -head-image 'nextflow/nextflow:22.10.1' -config ../nextflow.config -config ../configs/atacseq.config --save_reference false --outdir /data/output/ -profile minikube -remoteProfile test
+Jan-03 18:28:02.313 [main] DEBUG nextflow.config.ConfigBuilder - User config file: /home/niklas/Nextcloud/repos/PJDS/CWS-Prov/ExperimentsAndResults/execution/minikube/../nextflow.config
+Jan-03 18:28:02.313 [main] DEBUG nextflow.config.ConfigBuilder - User config file: /home/niklas/Nextcloud/repos/PJDS/CWS-Prov/ExperimentsAndResults/execution/minikube/../configs/atacseq.config
+Jan-03 18:28:02.315 [main] DEBUG nextflow.config.ConfigBuilder - Parsing config file: /home/niklas/Nextcloud/repos/PJDS/CWS-Prov/ExperimentsAndResults/execution/nextflow.config
+Jan-03 18:28:02.315 [main] DEBUG nextflow.config.ConfigBuilder - Parsing config file: /home/niklas/Nextcloud/repos/PJDS/CWS-Prov/ExperimentsAndResults/execution/configs/atacseq.config
+Jan-03 18:28:02.333 [main] DEBUG nextflow.config.ConfigBuilder - Applying config profile: `minikube`
+Jan-03 18:28:02.959 [main] DEBUG nextflow.config.ConfigBuilder - Applying config profile: `minikube`
+Jan-03 18:28:02.972 [main] DEBUG nextflow.config.ConfigBuilder - Available config profiles: [rank_min_roundrobin, rank_max_fair, random_roundrobin, rank_random, rank_min_random, random_fair, min_random, rank_fair, rank_roundrobin, random_random, max_fair, rank_min_fair, fifo_fair, minikube, max_roundrobin, fifo_roundrobin, rank_max_random, rank_max_roundrobin, max_random, fifo_random, min_roundrobin, min_fair]
+Jan-03 18:28:03.068 [main] DEBUG nextflow.k8s.K8sConfig - Kubernetes workDir=/data/work/; projectDir=/data/project/; volumeClaims=[api-exp-data, api-exp-input]
+Jan-03 18:28:03.259 [main] DEBUG nextflow.scm.ProviderConfig - Using SCM config path: /home/niklas/.nextflow/scm
+Jan-03 18:28:03.302 [main] DEBUG nextflow.k8s.K8sDriverLauncher - Created K8s configMap with name: nf-config-f5dac692
+Jan-03 18:28:03.322 [main] INFO  nextflow.k8s.K8sDriverLauncher - Launcher pod spec file: .nextflow.pod.yaml
+Jan-03 18:29:24.123 [main] DEBUG nextflow.k8s.K8sDriverLauncher - Wait for pod termination name=peaceful-cantor
