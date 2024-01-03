@@ -1,6 +1,6 @@
 #!/bin/bash
 # workflows=( rnaseq atacseq chipseq ampliseq mag viralrecon nanoseq sarek eager )
-workflows=( sarek )
+workflows=( rnaseq sarek )
 # prios=( fifo rank random max min rank_max rank_min )
 prios=( fifo )
 # assigns=( random roundrobin fair )
@@ -47,7 +47,7 @@ do
     fi
 
     # while [ $trial -ne 6 ]
-    while [ $trial -ne 2 ]
+    while [ $trial -ne 4 ]
     do
         mkdir $cluster
         strategy="original"

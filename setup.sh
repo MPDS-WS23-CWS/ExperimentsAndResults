@@ -42,17 +42,17 @@ echo -e "------postGREST service and pods started------ \n"
 
 # load input data sets in cws-namespace onto management pod
 
-#kubectl cp inputs/rnaseq $namespace/management:/input/
+kubectl cp inputs/rnaseq $namespace/management:/input/
 kubectl cp inputs/sarek $namespace/management:/input/
-#kubectl cp inputs/chipseq $namespace/management:/input/
-#kubectl cp inputs/atacseq $namespace/management:/input/
-#kubectl cp inputs/mag $namespace/management:/input/
+kubectl cp inputs/chipseq $namespace/management:/input/
+kubectl cp inputs/atacseq $namespace/management:/input/
+kubectl cp inputs/mag $namespace/management:/input/
 kubectl cp inputs/ampliseq $namespace/management:/input/
-#kubectl cp inputs/nanoseq $namespace/management:/input/
-#kubectl cp inputs/viralrecon $namespace/management:/input/
-#kubectl cp inputs/eager $namespace/management:/input/
+kubectl cp inputs/nanoseq $namespace/management:/input/
+kubectl cp inputs/viralrecon $namespace/management:/input/
+kubectl cp inputs/eager $namespace/management:/input/
 
-#kubectl cp setup/nanoseqPatch.diff $namespace/management:/input/
+kubectl cp setup/nanoseqPatch.diff $namespace/management:/input/
 
 # run commands.sh on management pod
 kubectl cp setup/commands.sh $namespace/management:/input/
