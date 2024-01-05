@@ -1,6 +1,6 @@
 #!/bin/bash
 namespace="cws"
-namespace2="database"
+namespace2="db"
 
 # setup of cws related stuff
 kubectl create namespace $namespace
@@ -37,6 +37,15 @@ kubectl apply -f ../ProvenanceEngine/database/pgSQL/db-service.yaml --namespace 
 kubectl apply -f ../ProvenanceEngine/database/pgREST/postgrest-deployment.yaml --namespace $namespace2
 kubectl apply -f ../ProvenanceEngine/database/pgREST/postgrest-service.yaml --namespace $namespace2
 
+# Get the name of the latest deployment in the namespace
+latest_deployment=$(kubectl get deployment -n $namespace2 -o custom-columns=":metadata.name" --sort-by=.metadata.creationTimestamp | tail -n 1)
+
+# Wait for the latest deployment to be ready
+kubectl wait --for=condition=available deployment/$latest_deployment -n $namespace2
+
+# Restart the latest deployment
+kubectl rollout restart deployment/$latest_deployment -n $namespace2
+
 
 echo -e "------postGREST service and pods started------ \n"
 
@@ -64,10 +73,13 @@ kubectl apply -f setup/accounts.yaml --namespace $namespace
 kubectl label nodes minikube cwsscheduler=true
 kubectl label nodes minikube-m02 minikube-m03 minikube-m04 cwsexperiment=true
 
+# Enable port-forwarding for db & metrics
+cd ../ProvenanceEngine
+bash port-forwarding.sh
+
 sleep 3
 
-# Enable port-forwarding for db & metrics
-bash ../ProvenanceEngine/port-forwarding.sh
+echo -e "--------CWS-Prov-Setup is complete! You can run the workflows now!-------- \n"
 
 # if you face any problems, run this manually in the pod.
-kubectl exec  --namespace $namespace management -- /bin/bash /input/commands.sh
+# kubectl exec  --namespace $namespace management -- /bin/bash /input/commands.sh
