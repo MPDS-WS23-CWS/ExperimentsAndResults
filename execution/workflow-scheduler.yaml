@@ -13,6 +13,10 @@ spec:
       value: workflow-scheduler
     - name: AUTOCLOSE
       value: "false"
+    - name: PROVENANCE_DB_API_URL
+      value: postgrest-service.db.svc.cluster.local
+    - name: PROVENANCE_DB_API_URL
+      value: "3000"
     #image: commonworkflowscheduler/kubernetesscheduler:v1.0
     image: nfomin/cws:latest
     imagePullPolicy: Always
