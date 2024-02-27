@@ -13,9 +13,9 @@ kubectl wait --for=condition=ready pod management --namespace $namespace
 # setup metricScraper
 # 1 basic prometheus setup
 kubectl create namespace monitoring
-kubectl create -f ../ProvenanceEngine/MetricScraper/minimal_setup/kubernetes-prometheus/clusterRole.yaml
-kubectl create -f ../ProvenanceEngine/MetricScraper/minimal_setup/kubernetes-prometheus/config-map.yaml
-kubectl create -f ../ProvenanceEngine/MetricScraper/minimal_setup/kubernetes-prometheus/prometheus-deployment.yaml
+kubectl create -f ../ProvenanceEngine/MetricScraper/minimal_setup/clusterRole.yaml
+kubectl create -f ../ProvenanceEngine/MetricScraper/minimal_setup/config-map.yaml
+kubectl create -f ../ProvenanceEngine/MetricScraper/minimal_setup/prometheus-deployment.yaml
 
 # 2 kube-state-metrics
 kubectl apply -f ../ProvenanceEngine/MetricScraper/minimal_setup/kube-state-metrics
@@ -73,13 +73,15 @@ kubectl apply -f setup/accounts.yaml --namespace $namespace
 kubectl label nodes minikube cwsscheduler=true
 kubectl label nodes minikube-m02 minikube-m03 minikube-m04 cwsexperiment=true
 
+sleep 15
+
 # Enable port-forwarding for db & metrics
 cd ../ProvenanceEngine
-bash port-forwarding.sh
+bash port_forwarding.sh
 
 sleep 3
 
-echo -e "--------CWS-Prov-Setup is complete! You can run the workflows now!-------- \n"
+echo -e "--------CWS-Prov-Setup is connected & complete! You can run the workflows now!-------- \n"
 
 # if you face any problems, run this manually in the pod.
 # kubectl exec  --namespace $namespace management -- /bin/bash /input/commands.sh
