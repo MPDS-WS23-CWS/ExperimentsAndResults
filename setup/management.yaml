@@ -1,30 +1,52 @@
-# Test
 apiVersion: v1
 kind: Pod
 metadata:
   name: management
 spec:
   containers:
-  - name: management
-    image: ubuntu
-    command:
-      - /bin/bash
-      - "-c"
-      - "sleep infinity"
-    workingDir: /data
-    volumeMounts:
-      - mountPath: /data
-        name: data
-      - mountPath: /input
-        name: input
-    securityContext:
-      runAsUser: 0
+    - name: management
+      image: ubuntu
+      command:
+        - /bin/bash
+        - "-c"
+        - |
+          apt-get update &&
+          apt-get install -y bc &&
+          sleep 35  # Wait for 35 seconds before checking the directory.
+          
+          echo "Node, Sysbench Time (s), Factor" > /data/benchmark.csv
+          
+          # Process the output files to generate benchmark.csv.
+          declare -A nodeTimes
+          
+          for FILE in /data/*-sysbench-output.txt; do
+            if [ -f "$FILE" ]; then
+              NODE=$(basename "$FILE" -sysbench-output.txt)
+              TIME=$(grep -hoP "total time:\s+\K\d+\.\d+" "$FILE")
+              nodeTimes["$NODE"]=$TIME
+            fi
+          done
+          
+          MIN_TIME=$(printf "%s\n" "${nodeTimes[@]}" | sort -n | head -1)
+          
+          for NODE in "${!nodeTimes[@]}"; do
+            TIME=${nodeTimes["$NODE"]}
+            FACTOR=$(echo "scale=6; $TIME / $MIN_TIME" | bc)
+            echo "$NODE, $TIME, $FACTOR" >> /data/benchmark.csv
+          done
+          
+      workingDir: /data
+      volumeMounts:
+        - mountPath: /data
+          name: data
+        - mountPath: /input
+          name: input
+      securityContext:
+        runAsUser: 0
   volumes:
-  - name: data
-    persistentVolumeClaim:
-      claimName: api-exp-data
-  - name: input
-    persistentVolumeClaim:
-      claimName: api-exp-input
-  securityContext:
-    runAsUser: 0
+    - name: data
+      persistentVolumeClaim:
+        claimName: api-exp-data
+    - name: input
+      persistentVolumeClaim:
+        claimName: api-exp-input
