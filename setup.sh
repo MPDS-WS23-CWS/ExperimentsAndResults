@@ -7,6 +7,9 @@ kubectl create namespace $namespace
 kubectl create namespace $namespace2
 kubectl apply -f setup/pv.yaml --namespace $namespace
 kubectl apply -f setup/pvc.yaml --namespace $namespace
+kubectl apply -f setup/daemonset.yaml -n $namespace
+kubectl -n $namespace wait --for=condition=ready pod -l name=sysbench --timeout=600s
+sleep 30
 kubectl apply -f setup/management.yaml --namespace $namespace
 kubectl wait --for=condition=ready pod management --namespace $namespace
 
@@ -72,8 +75,6 @@ kubectl apply -f setup/accounts.yaml --namespace $namespace
 # label cluster-nodes
 kubectl label nodes minikube cwsscheduler=true
 kubectl label nodes minikube-m02 minikube-m03 minikube-m04 cwsexperiment=true
-
-sleep 15
 
 # Enable port-forwarding for db & metrics
 cd ../ProvenanceEngine
