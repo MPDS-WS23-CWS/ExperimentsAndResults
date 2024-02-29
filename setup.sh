@@ -9,6 +9,7 @@ kubectl apply -f setup/pv.yaml --namespace $namespace
 kubectl apply -f setup/pvc.yaml --namespace $namespace
 kubectl apply -f setup/daemonset.yaml -n $namespace
 kubectl -n $namespace wait --for=condition=ready pod -l name=sysbench --timeout=600s
+echo "Waiting for management pod to be started..."
 sleep 30
 kubectl apply -f setup/management.yaml --namespace $namespace
 kubectl wait --for=condition=ready pod management --namespace $namespace
