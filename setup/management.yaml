@@ -10,31 +10,39 @@ spec:
         - /bin/bash
         - "-c"
         - |
-          apt-get update &&
-          apt-get install -y bc &&
-          sleep 35  # Wait for 35 seconds before checking the directory.
-          
+          echo "Starting package update and installation..."
+          echo "Installation complete. Pausing for 35 seconds..."
+
+          echo "Starting to process output files..."
           echo "Node, Sysbench Time (s), Factor" > /data/benchmark.csv
-          
-          # Process the output files to generate benchmark.csv.
+
           declare -A nodeTimes
-          
+
           for FILE in /data/*-sysbench-output.txt; do
-            if [ -f "$FILE" ]; then
-              NODE=$(basename "$FILE" -sysbench-output.txt)
-              TIME=$(grep -hoP "total time:\s+\K\d+\.\d+" "$FILE")
-              nodeTimes["$NODE"]=$TIME
-            fi
+            echo "Processing file: $FILE"
+            NODE=$(basename "$FILE" -sysbench-output.txt)
+            echo "Extracted node: $NODE"
+            TIME=$(grep -hoP "total time:\s+\K\d+\.\d+" "$FILE")
+            echo "Extracted time: $TIME"
+            nodeTimes["$NODE"]=$TIME
           done
-          
+
+          echo "Calculating minimum time..."
           MIN_TIME=$(printf "%s\n" "${nodeTimes[@]}" | sort -n | head -1)
-          
+          echo "Minimum time: $MIN_TIME"
+
+          echo "Calculating factors and writing to CSV..."
           for NODE in "${!nodeTimes[@]}"; do
             TIME=${nodeTimes["$NODE"]}
-            FACTOR=$(echo "scale=6; $TIME / $MIN_TIME" | bc)
+            FACTOR=$(awk -v time="$TIME" -v min_time="$MIN_TIME" 'BEGIN { printf "%.3f", time / min_time }')
+            echo "Writing $NODE, $TIME, $FACTOR to CSV"
             echo "$NODE, $TIME, $FACTOR" >> /data/benchmark.csv
           done
-          
+
+          echo "Profiling completed successfully."
+
+          sleep infinity
+
       workingDir: /data
       volumeMounts:
         - mountPath: /data
