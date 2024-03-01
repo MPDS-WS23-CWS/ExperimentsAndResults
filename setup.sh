@@ -83,6 +83,12 @@ bash port_forwarding.sh
 
 sleep 3
 
+ kubectl delete daemonset sysbench-daemonset -n cws
+
+echo -e "Profiling completed. Daemonset is deleted..."
+
+sleep 3
+
 echo -e "--------CWS-Prov-Setup is connected & complete! You can run the workflows now!-------- \n"
 
 # if you face any problems, run this manually in the pod.
