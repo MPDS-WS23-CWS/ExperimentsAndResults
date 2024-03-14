@@ -1,5 +1,0 @@
-Launcher pod spec file: .nextflow.pod.yaml
-Pod submitted: peaceful-cantor .. waiting to start[2KPod started: peaceful-cantor
-N E X T F L O W  ~  version 22.10.1
-Launching `/input/pipelines/atacseq/main.nf` [peaceful-cantor] DSL1 - revision: 3404d0d86d
-Trace file already exists: /data/output/trace.csv

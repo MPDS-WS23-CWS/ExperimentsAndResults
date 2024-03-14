@@ -3,24 +3,21 @@ kind: PersistentVolumeClaim
 metadata:
   name: api-exp-data
 spec:
-  storageClassName: standard
-  volumeName: nfs-v1
+  storageClassName: rook-cephfs
   accessModes:
   - ReadWriteMany
   resources:
     requests:
-      storage: 10Gi
+      storage: 500Gi
 ---
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
   name: api-exp-input
 spec:
-  storageClassName: standard
-  volumeName: nfs-v2
+  storageClassName: rook-cephfs
   accessModes:
   - ReadWriteMany
   resources:
     requests:
-      storage: 5Gi    
-
+      storage: 100Gi  

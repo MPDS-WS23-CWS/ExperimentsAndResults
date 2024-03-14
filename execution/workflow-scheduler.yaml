@@ -18,7 +18,7 @@ spec:
     - name: PROVENANCE_DB_API_PORT
       value: "3000"
     #image: commonworkflowscheduler/kubernetesscheduler:v1.0
-    image: nfomin/cws:latest
+    image: juscou/cws:1.0
     imagePullPolicy: Always
     name: workflow-scheduler
     resources:
