@@ -17,10 +17,11 @@ kubectl wait --for=condition=ready pod management --namespace $namespace
 # setup metricScraper
 # 1 basic prometheus setup
 kubectl create namespace monitoring
-kubectl create -f ../ProvenanceEngine/MetricScraper/minimal_setup/clusterRole.yaml
-kubectl create -f ../ProvenanceEngine/MetricScraper/minimal_setup/config-map.yaml
-kubectl create -f ../ProvenanceEngine/MetricScraper/minimal_setup/prometheus-deployment.yaml
-kubectl create -f ../ProvenanceEngine/MetricScraper/minimal_setup/prometheus-service.yaml
+kubectl create -f ../ProvenanceEngine/MetricScraper/minimal_setup/clusterRole.yaml --namespace monitoring
+kubectl create -f ../ProvenanceEngine/MetricScraper/minimal_setup/config-map.yaml --namespace monitoring
+kubectl create -f ../ProvenanceEngine/MetricScraper/minimal_setup/prometheus-deployment.yaml --namespace monitoring
+kubectl create -f ../ProvenanceEngine/MetricScraper/minimal_setup/prometheus-service.yaml --namespace monitoring
+
 
 # 2 kube-state-metrics
 kubectl apply -f ../ProvenanceEngine/MetricScraper/minimal_setup/kube-state-metrics
@@ -36,6 +37,11 @@ kubectl apply -f ../ProvenanceEngine/database/pgSQL/db-volume-claim.yaml --names
 kubectl apply -f ../ProvenanceEngine/database/pgSQL/db-configmap.yaml --namespace $namespace2
 kubectl apply -f ../ProvenanceEngine/database/pgSQL/db-deployment.yaml --namespace $namespace2
 kubectl apply -f ../ProvenanceEngine/database/pgSQL/db-service.yaml --namespace $namespace2
+
+#start prov collector
+kubectl create -f ../ProvenanceEngine/ProvenanceCollector/deployment.yaml --namespace monitoring
+sleep 20
+
 
 #echo -e "------database service and pods started------\n"
 
