@@ -2,7 +2,7 @@
 # workflows=( rnaseq atacseq chipseq ampliseq mag viralrecon nanoseq sarek eager )
 # prios=( fifo rank random max min rank_max rank_min )
 # assigns=( random roundrobin fair )
-workflows=( rnaseq viralrecon )
+workflows=( atacseq viralrecon rnaseq )
 prios=( mintime maxtime rank_min )
 assigns=( time )
 
