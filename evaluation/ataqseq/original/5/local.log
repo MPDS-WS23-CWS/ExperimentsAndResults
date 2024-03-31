@@ -1,0 +1,14 @@
+Mar-30 12:59:13.610 [main] DEBUG nextflow.cli.Launcher - $> nextflow kuberun /input/pipelines/atacseq/ -v 'api-exp-data:/data' -v 'api-exp-input:/input' -head-image 'nextflow/nextflow:22.10.1' -config ../nextflow.config -config ../configs/atacseq.config --save_reference false --outdir /data/output/ -profile CPU -remoteProfile test
+Mar-30 12:59:13.702 [main] DEBUG nextflow.config.ConfigBuilder - User config file: /home/kubeSetup/CWS/ExperimentsAndResults/execution/CPU/../nextflow.config
+Mar-30 12:59:13.703 [main] DEBUG nextflow.config.ConfigBuilder - User config file: /home/kubeSetup/CWS/ExperimentsAndResults/execution/CPU/../configs/atacseq.config
+Mar-30 12:59:13.703 [main] DEBUG nextflow.config.ConfigBuilder - Parsing config file: /home/kubeSetup/CWS/ExperimentsAndResults/execution/nextflow.config
+Mar-30 12:59:13.703 [main] DEBUG nextflow.config.ConfigBuilder - Parsing config file: /home/kubeSetup/CWS/ExperimentsAndResults/execution/configs/atacseq.config
+Mar-30 12:59:13.721 [main] DEBUG nextflow.config.ConfigBuilder - Applying config profile: `CPU`
+Mar-30 12:59:14.364 [main] DEBUG nextflow.config.ConfigBuilder - Applying config profile: `CPU`
+Mar-30 12:59:14.378 [main] DEBUG nextflow.config.ConfigBuilder - Available config profiles: [rank_min_roundrobin, rank_max_fair, random_roundrobin, rank_random, rank_min_random, random_fair, CPU, min_random, rank_fair, rank_roundrobin, random_random, max_fair, rank_min_fair, fifo_fair, max_roundrobin, fifo_roundrobin, rank_max_random, rank_max_roundrobin, max_random, fifo_random, min_roundrobin, min_fair]
+Mar-30 12:59:14.470 [main] DEBUG nextflow.k8s.K8sConfig - Kubernetes workDir=/data/work/; projectDir=/data/project/; volumeClaims=[api-exp-data, api-exp-input]
+Mar-30 12:59:14.687 [main] DEBUG nextflow.scm.ProviderConfig - Using SCM config path: /home/kubeSetup/.nextflow/scm
+Mar-30 12:59:14.735 [main] DEBUG nextflow.k8s.K8sDriverLauncher - Created K8s configMap with name: nf-config-2cccbd9e
+Mar-30 12:59:14.759 [main] INFO  nextflow.k8s.K8sDriverLauncher - Launcher pod spec file: .nextflow.pod.yaml
+Mar-30 13:10:02.422 [main] DEBUG nextflow.k8s.K8sDriverLauncher - Wait for pod termination name=nasty-planck
+Mar-30 13:10:02.496 [main] DEBUG nextflow.k8s.K8sDriverLauncher - Deleted K8s configMap with name: nf-config-2cccbd9e

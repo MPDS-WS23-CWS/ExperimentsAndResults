@@ -1,0 +1,198 @@
+2024-03-30T01:01:53.540Z  INFO 1 --- [pool-2-thread-1] c.k8s.scheduler.client.KubernetesClient  : Pod has released its resources: nf-556f5a3d6cc71a44964cfdedaed7216e
+2024-03-30T01:01:53.610Z  INFO 1 --- [pool-2-thread-1] c.k8s.scheduler.client.KubernetesClient  : Pod has released its resources: nf-2d86c432476734ffbc507ba30b0205a3
+2024-03-30T01:01:54.563Z  INFO 1 --- [pool-2-thread-1] c.k8s.scheduler.client.KubernetesClient  : Node cpu10 was modified
+2024-03-30T01:01:55.175Z  INFO 1 --- [pool-2-thread-1] c.k8s.scheduler.client.KubernetesClient  : Pod has released its resources: nf-aac96f9efae597328ef9cdb239c12314
+2024-03-30T01:01:55.180Z  INFO 1 --- [pool-2-thread-1] c.k8s.scheduler.client.KubernetesClient  : Pod has released its resources: nf-8de324d9b31b9e2ef874a4f044fcc55e
+2024-03-30T01:01:55.431Z  INFO 1 --- [pool-2-thread-2] c.k8s.scheduler.client.KubernetesClient  : Pod has released its resources: nf-b2982489a16d4028811a245b323e9108
+2024-03-30T01:01:55.487Z  INFO 1 --- [pool-2-thread-2] c.k8s.scheduler.client.KubernetesClient  : Pod has released its resources: nf-3a54c120a8be03e2e47bd4a1ce7aa12a
+2024-03-30T01:01:55.572Z  INFO 1 --- [pool-2-thread-2] c.k8s.scheduler.client.KubernetesClient  : Pod has released its resources: nf-91848a454517d137a409a3eadf072b4b
+2024-03-30T01:01:55.765Z  INFO 1 --- [pool-2-thread-2] c.k8s.scheduler.client.KubernetesClient  : Pod has released its resources: nf-2ae2d7e3d52fbcf1ebee41004512b680
+2024-03-30T01:01:56.208Z  INFO 1 --- [pool-2-thread-2] c.k8s.scheduler.client.KubernetesClient  : Pod has released its resources: nf-6eeb18dfd61862b9ed9b36b460273355
+2024-03-30T01:01:56.580Z  INFO 1 --- [pool-2-thread-2] c.k8s.scheduler.client.KubernetesClient  : Node cpu02 was modified
+2024-03-30T01:01:56.628Z  INFO 1 --- [pool-2-thread-2] c.k8s.scheduler.client.KubernetesClient  : Node cpu02 was modified
+2024-03-30T01:01:56.640Z  INFO 1 --- [pool-2-thread-2] c.k8s.scheduler.client.KubernetesClient  : Node cpu02 was modified
+2024-03-30T01:01:57.753Z  INFO 1 --- [pool-2-thread-1] c.k8s.scheduler.client.KubernetesClient  : Pod has released its resources: nf-b431dd803aa58d89dc18a4a3e9dc9aaf
+2024-03-30T01:01:58.699Z  INFO 1 --- [pool-2-thread-1] c.k8s.scheduler.client.KubernetesClient  : Node cpu03 was modified
+2024-03-30T01:01:58.765Z  INFO 1 --- [pool-2-thread-1] c.k8s.scheduler.client.KubernetesClient  : Node cpu03 was modified
+2024-03-30T01:01:58.774Z  INFO 1 --- [pool-2-thread-1] c.k8s.scheduler.client.KubernetesClient  : Pod has released its resources: nf-13ffe78d4f3a9d011a528e6944bc79bb
+2024-03-30T01:01:58.779Z  INFO 1 --- [pool-2-thread-1] c.k8s.scheduler.client.KubernetesClient  : Node cpu03 was modified
+2024-03-30T01:01:59.220Z  INFO 1 --- [       Thread-1] cws.k8s.scheduler.scheduler.Scheduler    : ------------------------------------
+Node: cpu10 Requirements(cpu=31.123, ram=133449839360)
+Node: cpu09 Requirements(cpu=31.623, ram=133949851648)
+Node: cpu08 Requirements(cpu=25.623, ram=95295105024)
+Node: cpu07 Requirements(cpu=30.978, ram=133898317824)
+Node: cpu06 Requirements(cpu=30.998, ram=133908447232)
+Node: cpu03 Requirements(cpu=31.623, ram=133949810688)
+Node: cpu02 Requirements(cpu=31.593, ram=133885954048)
+Node: cpu01 Requirements(cpu=29.623, ram=132648716288)
+------------------------------------
+2024-03-30T01:01:59.220Z  INFO 1 --- [       Thread-1] c.k.s.s.PrioritizeAssignScheduler        : getting TaskNodeAlignment
+2024-03-30T01:01:59.220Z  INFO 1 --- [       Thread-1] c.k.s.s.PrioritizeAssignScheduler        : updating models
+2024-03-30T01:01:59.330Z  INFO 1 --- [       Thread-1] c.k.scheduler.rest.ProvenanceRestClient  : Fetched provenance data of 39 processes
+2024-03-30T01:01:59.330Z  INFO 1 --- [       Thread-1] c.k.s.predictor.RuntimePredictor         : Computing adjusted runtimes for FASTQC (data points: 560)
+2024-03-30T01:01:59.330Z  INFO 1 --- [       Thread-1] c.k.s.predictor.RuntimePredictor         : Computing adjusted runtimes for MERGED_LIB_CONSENSUS_ANNOTATE (data points: 19)
+2024-03-30T01:01:59.330Z  INFO 1 --- [       Thread-1] c.k.s.predictor.RuntimePredictor         : Computing adjusted runtimes for MERGED_LIB_MACS2_QC (data points: 20)
+2024-03-30T01:01:59.330Z  INFO 1 --- [       Thread-1] c.k.s.predictor.RuntimePredictor         : Computing adjusted runtimes for output_documentation (data points: 20)
+2024-03-30T01:01:59.330Z  INFO 1 --- [       Thread-1] c.k.s.predictor.RuntimePredictor         : Computing adjusted runtimes for MERGED_LIB_BIGWIG (data points: 560)
+2024-03-30T01:01:59.330Z  INFO 1 --- [       Thread-1] c.k.s.predictor.RuntimePredictor         : Computing adjusted runtimes for MERGED_LIB_PLOTPROFILE (data points: 560)
+2024-03-30T01:01:59.331Z  INFO 1 --- [       Thread-1] c.k.s.predictor.RuntimePredictor         : Computing adjusted runtimes for MULTIQC (data points: 19)
+2024-03-30T01:01:59.331Z  INFO 1 --- [       Thread-1] c.k.s.predictor.RuntimePredictor         : Computing adjusted runtimes for SORT_BAM (data points: 560)
+2024-03-30T01:01:59.331Z  INFO 1 --- [       Thread-1] c.k.s.predictor.RuntimePredictor         : Computing adjusted runtimes for MERGED_LIB_CONSENSUS_DESEQ2 (data points: 20)
+2024-03-30T01:01:59.331Z  INFO 1 --- [       Thread-1] c.k.s.predictor.RuntimePredictor         : Computing adjusted runtimes for MERGED_REP_CONSENSUS (data points: 20)
+2024-03-30T01:01:59.331Z  INFO 1 --- [       Thread-1] c.k.s.predictor.RuntimePredictor         : Computing adjusted runtimes for MERGED_LIB_PICARD_METRICS (data points: 558)
+2024-03-30T01:01:59.331Z  INFO 1 --- [       Thread-1] c.k.s.predictor.RuntimePredictor         : Computing adjusted runtimes for BWA_MEM (data points: 560)
+2024-03-30T01:01:59.331Z  INFO 1 --- [       Thread-1] c.k.s.predictor.RuntimePredictor         : Computing adjusted runtimes for MERGED_REP_MACS2 (data points: 280)
+2024-03-30T01:01:59.331Z  INFO 1 --- [       Thread-1] c.k.s.predictor.RuntimePredictor         : Computing adjusted runtimes for MERGED_REP_BIGWIG (data points: 280)
+2024-03-30T01:01:59.331Z  INFO 1 --- [       Thread-1] c.k.s.predictor.RuntimePredictor         : Computing adjusted runtimes for MERGED_REP_MACS2_QC (data points: 20)
+2024-03-30T01:01:59.331Z  INFO 1 --- [       Thread-1] c.k.s.predictor.RuntimePredictor         : Computing adjusted runtimes for MERGED_LIB_CONSENSUS (data points: 20)
+2024-03-30T01:01:59.331Z  INFO 1 --- [       Thread-1] c.k.s.predictor.RuntimePredictor         : Computing adjusted runtimes for MERGED_REP_MACS2_ANNOTATE (data points: 280)
+2024-03-30T01:01:59.331Z  INFO 1 --- [       Thread-1] c.k.s.predictor.RuntimePredictor         : Computing adjusted runtimes for MERGED_REP_CONSENSUS_COUNTS (data points: 20)
+2024-03-30T01:01:59.331Z  INFO 1 --- [       Thread-1] c.k.s.predictor.RuntimePredictor         : Computing adjusted runtimes for BWA_INDEX (data points: 20)
+2024-03-30T01:01:59.331Z  INFO 1 --- [       Thread-1] c.k.s.predictor.RuntimePredictor         : Computing adjusted runtimes for get_software_versions (data points: 20)
+2024-03-30T01:01:59.331Z  INFO 1 --- [       Thread-1] c.k.s.predictor.RuntimePredictor         : Computing adjusted runtimes for MERGED_LIB_BAM (data points: 560)
+2024-03-30T01:01:59.331Z  INFO 1 --- [       Thread-1] c.k.s.predictor.RuntimePredictor         : Computing adjusted runtimes for CHECK_DESIGN (data points: 20)
+2024-03-30T01:01:59.331Z  INFO 1 --- [       Thread-1] c.k.s.predictor.RuntimePredictor         : Computing adjusted runtimes for MERGED_LIB_ATAQV_MKARV (data points: 19)
+2024-03-30T01:01:59.331Z  INFO 1 --- [       Thread-1] c.k.s.predictor.RuntimePredictor         : Computing adjusted runtimes for MERGED_LIB_PRESEQ (data points: 560)
+2024-03-30T01:01:59.332Z  INFO 1 --- [       Thread-1] c.k.s.predictor.RuntimePredictor         : Computing adjusted runtimes for MAKE_GENE_BED (data points: 20)
+2024-03-30T01:01:59.332Z  INFO 1 --- [       Thread-1] c.k.s.predictor.RuntimePredictor         : Computing adjusted runtimes for MERGED_LIB_MACS2 (data points: 560)
+2024-03-30T01:01:59.332Z  INFO 1 --- [       Thread-1] c.k.s.predictor.RuntimePredictor         : Computing adjusted runtimes for MERGED_LIB_BAM_FILTER (data points: 560)
+2024-03-30T01:01:59.332Z  INFO 1 --- [       Thread-1] c.k.s.predictor.RuntimePredictor         : Computing adjusted runtimes for MERGED_LIB_CONSENSUS_COUNTS (data points: 20)
+2024-03-30T01:01:59.332Z  INFO 1 --- [       Thread-1] c.k.s.predictor.RuntimePredictor         : Computing adjusted runtimes for MERGED_LIB_ATAQV (data points: 560)
+2024-03-30T01:01:59.332Z  INFO 1 --- [       Thread-1] c.k.s.predictor.RuntimePredictor         : Computing adjusted runtimes for MERGED_LIB_MACS2_ANNOTATE (data points: 560)
+2024-03-30T01:01:59.332Z  INFO 1 --- [       Thread-1] c.k.s.predictor.RuntimePredictor         : Computing adjusted runtimes for TRIMGALORE (data points: 560)
+2024-03-30T01:01:59.332Z  INFO 1 --- [       Thread-1] c.k.s.predictor.RuntimePredictor         : Computing adjusted runtimes for MERGED_REP_BAM (data points: 280)
+2024-03-30T01:01:59.332Z  INFO 1 --- [       Thread-1] c.k.s.predictor.RuntimePredictor         : Computing adjusted runtimes for MERGED_REP_CONSENSUS_DESEQ2 (data points: 20)
+2024-03-30T01:01:59.332Z  INFO 1 --- [       Thread-1] c.k.s.predictor.RuntimePredictor         : Computing adjusted runtimes for MERGED_LIB_BAM_REMOVE_ORPHAN (data points: 560)
+2024-03-30T01:01:59.332Z  INFO 1 --- [       Thread-1] c.k.s.predictor.RuntimePredictor         : Computing adjusted runtimes for MERGED_REP_CONSENSUS_ANNOTATE (data points: 19)
+2024-03-30T01:01:59.332Z  INFO 1 --- [       Thread-1] c.k.s.predictor.RuntimePredictor         : Computing adjusted runtimes for MAKE_TSS_BED (data points: 20)
+2024-03-30T01:01:59.332Z  INFO 1 --- [       Thread-1] c.k.s.predictor.RuntimePredictor         : Computing adjusted runtimes for IGV (data points: 20)
+2024-03-30T01:01:59.332Z  INFO 1 --- [       Thread-1] c.k.s.predictor.RuntimePredictor         : Computing adjusted runtimes for MERGED_LIB_PLOTFINGERPRINT (data points: 560)
+2024-03-30T01:01:59.333Z  INFO 1 --- [       Thread-1] c.k.s.predictor.RuntimePredictor         : Computing adjusted runtimes for MAKE_GENOME_FILTER (data points: 20)
+2024-03-30T01:01:59.333Z  INFO 1 --- [       Thread-1] c.k.s.predictor.RuntimePredictor         : Data not correlated for process FASTQC (Pearson: -0.21862469406264415)
+2024-03-30T01:01:59.333Z  INFO 1 --- [       Thread-1] c.k.s.predictor.RuntimePredictor         : Runtime median 9.0 computed for process FASTQC
+2024-03-30T01:01:59.333Z  INFO 1 --- [       Thread-1] c.k.s.predictor.RuntimePredictor         : Data not correlated for process MERGED_LIB_CONSENSUS_ANNOTATE (Pearson: NaN)
+2024-03-30T01:01:59.333Z  INFO 1 --- [       Thread-1] c.k.s.predictor.RuntimePredictor         : Runtime median 6.0 computed for process MERGED_LIB_CONSENSUS_ANNOTATE
+2024-03-30T01:01:59.333Z  INFO 1 --- [       Thread-1] c.k.s.predictor.RuntimePredictor         : Data not correlated for process MERGED_LIB_MACS2_QC (Pearson: 0.2422892627661432)
+2024-03-30T01:01:59.333Z  INFO 1 --- [       Thread-1] c.k.s.predictor.RuntimePredictor         : Runtime median 10.0 computed for process MERGED_LIB_MACS2_QC
+2024-03-30T01:01:59.333Z  INFO 1 --- [       Thread-1] c.k.s.predictor.RuntimePredictor         : Data not correlated for process output_documentation (Pearson: NaN)
+2024-03-30T01:01:59.333Z  INFO 1 --- [       Thread-1] c.k.s.predictor.RuntimePredictor         : Runtime median 5.0 computed for process output_documentation
+2024-03-30T01:01:59.333Z  INFO 1 --- [       Thread-1] c.k.s.predictor.RuntimePredictor         : Data not correlated for process MERGED_LIB_BIGWIG (Pearson: 0.04669836825162364)
+2024-03-30T01:01:59.333Z  INFO 1 --- [       Thread-1] c.k.s.predictor.RuntimePredictor         : Runtime median 2.0 computed for process MERGED_LIB_BIGWIG
+2024-03-30T01:01:59.333Z  INFO 1 --- [       Thread-1] c.k.s.predictor.RuntimePredictor         : Data not correlated for process MERGED_LIB_PLOTPROFILE (Pearson: -0.12771216291364343)
+2024-03-30T01:01:59.333Z  INFO 1 --- [       Thread-1] c.k.s.predictor.RuntimePredictor         : Runtime median 64.0 computed for process MERGED_LIB_PLOTPROFILE
+2024-03-30T01:01:59.333Z  INFO 1 --- [       Thread-1] c.k.s.predictor.RuntimePredictor         : Data not correlated for process MULTIQC (Pearson: 0.2732160313718639)
+2024-03-30T01:01:59.333Z  INFO 1 --- [       Thread-1] c.k.s.predictor.RuntimePredictor         : Runtime median 33.0 computed for process MULTIQC
+2024-03-30T01:01:59.333Z  INFO 1 --- [       Thread-1] c.k.s.predictor.RuntimePredictor         : Data not correlated for process SORT_BAM (Pearson: 0.04477435574982657)
+2024-03-30T01:01:59.333Z  INFO 1 --- [       Thread-1] c.k.s.predictor.RuntimePredictor         : Runtime median 2.0 computed for process SORT_BAM
+2024-03-30T01:01:59.333Z  INFO 1 --- [       Thread-1] c.k.s.predictor.RuntimePredictor         : Data not correlated for process MERGED_LIB_CONSENSUS_DESEQ2 (Pearson: NaN)
+2024-03-30T01:01:59.333Z  INFO 1 --- [       Thread-1] c.k.s.predictor.RuntimePredictor         : Runtime median 68.5 computed for process MERGED_LIB_CONSENSUS_DESEQ2
+2024-03-30T01:01:59.333Z  INFO 1 --- [       Thread-1] c.k.s.predictor.RuntimePredictor         : Data not correlated for process MERGED_REP_CONSENSUS (Pearson: NaN)
+2024-03-30T01:01:59.333Z  INFO 1 --- [       Thread-1] c.k.s.predictor.RuntimePredictor         : Runtime median 4.0 computed for process MERGED_REP_CONSENSUS
+2024-03-30T01:01:59.333Z  INFO 1 --- [       Thread-1] c.k.s.predictor.RuntimePredictor         : Data not correlated for process MERGED_LIB_PICARD_METRICS (Pearson: 0.15125948892518665)
+2024-03-30T01:01:59.333Z  INFO 1 --- [       Thread-1] c.k.s.predictor.RuntimePredictor         : Runtime median 5.0 computed for process MERGED_LIB_PICARD_METRICS
+2024-03-30T01:01:59.333Z  INFO 1 --- [       Thread-1] c.k.s.predictor.RuntimePredictor         : Data not correlated for process BWA_MEM (Pearson: 0.11433004084745035)
+2024-03-30T01:01:59.333Z  INFO 1 --- [       Thread-1] c.k.s.predictor.RuntimePredictor         : Runtime median 4.0 computed for process BWA_MEM
+2024-03-30T01:01:59.333Z  INFO 1 --- [       Thread-1] c.k.s.predictor.RuntimePredictor         : Data not correlated for process MERGED_REP_MACS2 (Pearson: 0.19097376474506503)
+2024-03-30T01:01:59.333Z  INFO 1 --- [       Thread-1] c.k.s.predictor.RuntimePredictor         : Runtime median 4.0 computed for process MERGED_REP_MACS2
+2024-03-30T01:01:59.333Z  INFO 1 --- [       Thread-1] c.k.s.predictor.RuntimePredictor         : Data not correlated for process MERGED_REP_BIGWIG (Pearson: 0.14208435039620457)
+2024-03-30T01:01:59.333Z  INFO 1 --- [       Thread-1] c.k.s.predictor.RuntimePredictor         : Runtime median 3.0 computed for process MERGED_REP_BIGWIG
+2024-03-30T01:01:59.333Z  INFO 1 --- [       Thread-1] c.k.s.predictor.RuntimePredictor         : Data not correlated for process MERGED_REP_MACS2_QC (Pearson: 0.38941532099079507)
+2024-03-30T01:01:59.333Z  INFO 1 --- [       Thread-1] c.k.s.predictor.RuntimePredictor         : Runtime median 9.0 computed for process MERGED_REP_MACS2_QC
+2024-03-30T01:01:59.333Z  INFO 1 --- [       Thread-1] c.k.s.predictor.RuntimePredictor         : Data not correlated for process MERGED_LIB_CONSENSUS (Pearson: NaN)
+2024-03-30T01:01:59.333Z  INFO 1 --- [       Thread-1] c.k.s.predictor.RuntimePredictor         : Runtime median 4.0 computed for process MERGED_LIB_CONSENSUS
+2024-03-30T01:01:59.333Z  INFO 1 --- [       Thread-1] c.k.s.predictor.RuntimePredictor         : Data not correlated for process MERGED_REP_MACS2_ANNOTATE (Pearson: 0.12940769102635397)
+2024-03-30T01:01:59.333Z  INFO 1 --- [       Thread-1] c.k.s.predictor.RuntimePredictor         : Runtime median 6.0 computed for process MERGED_REP_MACS2_ANNOTATE
+2024-03-30T01:01:59.333Z  INFO 1 --- [       Thread-1] c.k.s.predictor.RuntimePredictor         : Data not correlated for process MERGED_REP_CONSENSUS_COUNTS (Pearson: NaN)
+2024-03-30T01:01:59.333Z  INFO 1 --- [       Thread-1] c.k.s.predictor.RuntimePredictor         : Runtime median 9.5 computed for process MERGED_REP_CONSENSUS_COUNTS
+2024-03-30T01:01:59.333Z  INFO 1 --- [       Thread-1] c.k.s.predictor.RuntimePredictor         : Data not correlated for process BWA_INDEX (Pearson: NaN)
+2024-03-30T01:01:59.333Z  INFO 1 --- [       Thread-1] c.k.s.predictor.RuntimePredictor         : Runtime median 15.0 computed for process BWA_INDEX
+2024-03-30T01:01:59.333Z  INFO 1 --- [       Thread-1] c.k.s.predictor.RuntimePredictor         : Data not correlated for process get_software_versions (Pearson: NaN)
+2024-03-30T01:01:59.333Z  INFO 1 --- [       Thread-1] c.k.s.predictor.RuntimePredictor         : Runtime median 9.0 computed for process get_software_versions
+2024-03-30T01:01:59.333Z  INFO 1 --- [       Thread-1] c.k.s.predictor.RuntimePredictor         : Data not correlated for process MERGED_LIB_BAM (Pearson: -0.32168065479884295)
+2024-03-30T01:01:59.333Z  INFO 1 --- [       Thread-1] c.k.s.predictor.RuntimePredictor         : Runtime median 15.0 computed for process MERGED_LIB_BAM
+2024-03-30T01:01:59.333Z  INFO 1 --- [       Thread-1] c.k.s.predictor.RuntimePredictor         : Data not correlated for process CHECK_DESIGN (Pearson: NaN)
+2024-03-30T01:01:59.333Z  INFO 1 --- [       Thread-1] c.k.s.predictor.RuntimePredictor         : Runtime median 10.0 computed for process CHECK_DESIGN
+2024-03-30T01:01:59.333Z  INFO 1 --- [       Thread-1] c.k.s.predictor.RuntimePredictor         : Data not correlated for process MERGED_LIB_ATAQV_MKARV (Pearson: NaN)
+2024-03-30T01:01:59.333Z  INFO 1 --- [       Thread-1] c.k.s.predictor.RuntimePredictor         : Runtime median 2.0 computed for process MERGED_LIB_ATAQV_MKARV
+2024-03-30T01:01:59.333Z  INFO 1 --- [       Thread-1] c.k.s.predictor.RuntimePredictor         : Data not correlated for process MERGED_LIB_PRESEQ (Pearson: -0.12844513461475324)
+2024-03-30T01:01:59.334Z  INFO 1 --- [       Thread-1] c.k.s.predictor.RuntimePredictor         : Runtime median 5.0 computed for process MERGED_LIB_PRESEQ
+2024-03-30T01:01:59.334Z  INFO 1 --- [       Thread-1] c.k.s.predictor.RuntimePredictor         : Data not correlated for process MAKE_GENE_BED (Pearson: NaN)
+2024-03-30T01:01:59.334Z  INFO 1 --- [       Thread-1] c.k.s.predictor.RuntimePredictor         : Runtime median 7.5 computed for process MAKE_GENE_BED
+2024-03-30T01:01:59.334Z  INFO 1 --- [       Thread-1] c.k.s.predictor.RuntimePredictor         : Data not correlated for process MERGED_LIB_MACS2 (Pearson: 0.051395590692482236)
+2024-03-30T01:01:59.334Z  INFO 1 --- [       Thread-1] c.k.s.predictor.RuntimePredictor         : Runtime median 3.0 computed for process MERGED_LIB_MACS2
+2024-03-30T01:01:59.334Z  INFO 1 --- [       Thread-1] c.k.s.predictor.RuntimePredictor         : Data not correlated for process MERGED_LIB_BAM_FILTER (Pearson: 0.0065606908129540245)
+2024-03-30T01:01:59.334Z  INFO 1 --- [       Thread-1] c.k.s.predictor.RuntimePredictor         : Runtime median 4.0 computed for process MERGED_LIB_BAM_FILTER
+2024-03-30T01:01:59.334Z  INFO 1 --- [       Thread-1] c.k.s.predictor.RuntimePredictor         : Data not correlated for process MERGED_LIB_CONSENSUS_COUNTS (Pearson: NaN)
+2024-03-30T01:01:59.334Z  INFO 1 --- [       Thread-1] c.k.s.predictor.RuntimePredictor         : Runtime median 8.5 computed for process MERGED_LIB_CONSENSUS_COUNTS
+2024-03-30T01:01:59.334Z  INFO 1 --- [       Thread-1] c.k.s.predictor.RuntimePredictor         : Data not correlated for process MERGED_LIB_ATAQV (Pearson: -0.13915286300026183)
+2024-03-30T01:01:59.334Z  INFO 1 --- [       Thread-1] c.k.s.predictor.RuntimePredictor         : Runtime median 4.0 computed for process MERGED_LIB_ATAQV
+2024-03-30T01:01:59.334Z  INFO 1 --- [       Thread-1] c.k.s.predictor.RuntimePredictor         : Data not correlated for process MERGED_LIB_MACS2_ANNOTATE (Pearson: 0.05217902902793301)
+2024-03-30T01:01:59.334Z  INFO 1 --- [       Thread-1] c.k.s.predictor.RuntimePredictor         : Runtime median 6.0 computed for process MERGED_LIB_MACS2_ANNOTATE
+2024-03-30T01:01:59.334Z  INFO 1 --- [       Thread-1] c.k.s.predictor.RuntimePredictor         : Data not correlated for process TRIMGALORE (Pearson: -0.06796254960783475)
+2024-03-30T01:01:59.334Z  INFO 1 --- [       Thread-1] c.k.s.predictor.RuntimePredictor         : Runtime median 16.0 computed for process TRIMGALORE
+2024-03-30T01:01:59.334Z  INFO 1 --- [       Thread-1] c.k.s.predictor.RuntimePredictor         : Data not correlated for process MERGED_REP_BAM (Pearson: 0.2405859712214607)
+2024-03-30T01:01:59.334Z  INFO 1 --- [       Thread-1] c.k.s.predictor.RuntimePredictor         : Runtime median 17.0 computed for process MERGED_REP_BAM
+2024-03-30T01:01:59.334Z  INFO 1 --- [       Thread-1] c.k.s.predictor.RuntimePredictor         : Data not correlated for process MERGED_REP_CONSENSUS_DESEQ2 (Pearson: NaN)
+2024-03-30T01:01:59.334Z  INFO 1 --- [       Thread-1] c.k.s.predictor.RuntimePredictor         : Runtime median 84.5 computed for process MERGED_REP_CONSENSUS_DESEQ2
+2024-03-30T01:01:59.334Z  INFO 1 --- [       Thread-1] c.k.s.predictor.RuntimePredictor         : Data not correlated for process MERGED_LIB_BAM_REMOVE_ORPHAN (Pearson: 0.19155447260829997)
+2024-03-30T01:01:59.334Z  INFO 1 --- [       Thread-1] c.k.s.predictor.RuntimePredictor         : Runtime median 2.0 computed for process MERGED_LIB_BAM_REMOVE_ORPHAN
+2024-03-30T01:01:59.334Z  INFO 1 --- [       Thread-1] c.k.s.predictor.RuntimePredictor         : Data not correlated for process MERGED_REP_CONSENSUS_ANNOTATE (Pearson: NaN)
+2024-03-30T01:01:59.334Z  INFO 1 --- [       Thread-1] c.k.s.predictor.RuntimePredictor         : Runtime median 5.0 computed for process MERGED_REP_CONSENSUS_ANNOTATE
+2024-03-30T01:01:59.334Z  INFO 1 --- [       Thread-1] c.k.s.predictor.RuntimePredictor         : Data not correlated for process MAKE_TSS_BED (Pearson: NaN)
+2024-03-30T01:01:59.334Z  INFO 1 --- [       Thread-1] c.k.s.predictor.RuntimePredictor         : Runtime median 1.0 computed for process MAKE_TSS_BED
+2024-03-30T01:01:59.334Z  INFO 1 --- [       Thread-1] c.k.s.predictor.RuntimePredictor         : Data not correlated for process IGV (Pearson: NaN)
+2024-03-30T01:01:59.334Z  INFO 1 --- [       Thread-1] c.k.s.predictor.RuntimePredictor         : Runtime median 3.0 computed for process IGV
+2024-03-30T01:01:59.334Z  INFO 1 --- [       Thread-1] c.k.s.predictor.RuntimePredictor         : Data not correlated for process MERGED_LIB_PLOTFINGERPRINT (Pearson: -0.11621695022271071)
+2024-03-30T01:01:59.334Z  INFO 1 --- [       Thread-1] c.k.s.predictor.RuntimePredictor         : Runtime median 11.0 computed for process MERGED_LIB_PLOTFINGERPRINT
+2024-03-30T01:01:59.334Z  INFO 1 --- [       Thread-1] c.k.s.predictor.RuntimePredictor         : Data not correlated for process MAKE_GENOME_FILTER (Pearson: NaN)
+2024-03-30T01:01:59.334Z  INFO 1 --- [       Thread-1] c.k.s.predictor.RuntimePredictor         : Runtime median 4.5 computed for process MAKE_GENOME_FILTER
+2024-03-30T01:01:59.340Z  INFO 1 --- [       Thread-1] cws.k8s.scheduler.model.Task             : Predict runtime for process MULTIQC with input size 147183803
+2024-03-30T01:01:59.340Z  INFO 1 --- [       Thread-1] c.k.s.predictor.RuntimePredictor         : Requested prediction for MULTIQC
+2024-03-30T01:01:59.340Z  INFO 1 --- [       Thread-1] c.k.s.predictor.RuntimePredictor         : runtimeMedians: {FASTQC=9.0, MERGED_LIB_CONSENSUS_ANNOTATE=6.0, MERGED_LIB_MACS2_QC=10.0, output_documentation=5.0, MERGED_LIB_BIGWIG=2.0, MERGED_LIB_PLOTPROFILE=64.0, MULTIQC=33.0, SORT_BAM=2.0, MERGED_LIB_CONSENSUS_DESEQ2=68.5, MERGED_REP_CONSENSUS=4.0, MERGED_LIB_PICARD_METRICS=5.0, BWA_MEM=4.0, MERGED_REP_MACS2=4.0, MERGED_REP_BIGWIG=3.0, MERGED_REP_MACS2_QC=9.0, MERGED_LIB_CONSENSUS=4.0, MERGED_REP_MACS2_ANNOTATE=6.0, MERGED_REP_CONSENSUS_COUNTS=9.5, BWA_INDEX=15.0, get_software_versions=9.0, MERGED_LIB_BAM=15.0, CHECK_DESIGN=10.0, MERGED_LIB_ATAQV_MKARV=2.0, MERGED_LIB_PRESEQ=5.0, MAKE_GENE_BED=7.5, MERGED_LIB_MACS2=3.0, MERGED_LIB_BAM_FILTER=4.0, MERGED_LIB_CONSENSUS_COUNTS=8.5, MERGED_LIB_ATAQV=4.0, MERGED_LIB_MACS2_ANNOTATE=6.0, TRIMGALORE=16.0, MERGED_REP_BAM=17.0, MERGED_REP_CONSENSUS_DESEQ2=84.5, MERGED_LIB_BAM_REMOVE_ORPHAN=2.0, MERGED_REP_CONSENSUS_ANNOTATE=5.0, MAKE_TSS_BED=1.0, IGV=3.0, MERGED_LIB_PLOTFINGERPRINT=11.0, MAKE_GENOME_FILTER=4.5}
+2024-03-30T01:01:59.340Z  INFO 1 --- [       Thread-1] c.k.s.predictor.RuntimePredictor         : runtimeRegressionModels: []
+2024-03-30T01:01:59.340Z  INFO 1 --- [       Thread-1] c.k.s.predictor.RuntimePredictor         : Found median
+2024-03-30T01:01:59.340Z  INFO 1 --- [       Thread-1] cws.k8s.scheduler.model.Task             : Predicted runtimes: {cpu10=33.0, cpu09=33.0, cpu08=33.0, cpu07=33.0, cpu06=33.0, cpu03=33.0, cpu02=33.0, cpu01=33.0}
+2024-03-30T01:01:59.340Z  INFO 1 --- [       Thread-1] c.k.s.scheduler.nodeassign.TimeAssign    : Pod: nf-cc512eb4284bdaa6c590de7d945d7a15 Requested Resources: Requirements(cpu=1, ram=6442450944)
+2024-03-30T01:01:59.340Z  INFO 1 --- [       Thread-1] c.k.s.scheduler.nodeassign.TimeAssign    : --> cpu09
+2024-03-30T01:01:59.354Z  INFO 1 --- [       Thread-1] cws.k8s.scheduler.scheduler.Scheduler    : Assign pod: nf-cc512eb4284bdaa6c590de7d945d7a15 to node: cpu09
+2024-03-30T01:01:59.357Z  INFO 1 --- [       Thread-1] cws.k8s.scheduler.scheduler.Scheduler    : Assigned pod to:cpu09
+2024-03-30T01:02:00.118Z  INFO 1 --- [pool-2-thread-1] c.k8s.scheduler.client.KubernetesClient  : Node cpu09 was modified
+2024-03-30T01:02:01.309Z  INFO 1 --- [pool-2-thread-2] c.k8s.scheduler.client.KubernetesClient  : Node cpu08 was modified
+2024-03-30T01:02:01.798Z  INFO 1 --- [pool-2-thread-2] c.k8s.scheduler.client.KubernetesClient  : Node cpu07 was modified
+2024-03-30T01:02:01.979Z  INFO 1 --- [pool-2-thread-2] c.k8s.scheduler.client.KubernetesClient  : Node cpu06 was modified
+2024-03-30T01:02:02.226Z  INFO 1 --- [pool-2-thread-2] c.k8s.scheduler.client.KubernetesClient  : Pod has released its resources: nf-9199e61b725197d42c3c26b652a7a088
+2024-03-30T01:02:02.265Z  INFO 1 --- [pool-2-thread-2] c.k8s.scheduler.client.KubernetesClient  : Node cpu01 was modified
+2024-03-30T01:02:04.757Z  INFO 1 --- [pool-2-thread-1] c.k8s.scheduler.client.KubernetesClient  : Node cpu10 was modified
+2024-03-30T01:02:04.833Z  INFO 1 --- [pool-2-thread-1] c.k8s.scheduler.client.KubernetesClient  : Node cpu10 was modified
+2024-03-30T01:02:04.846Z  INFO 1 --- [pool-2-thread-1] c.k8s.scheduler.client.KubernetesClient  : Node cpu10 was modified
+2024-03-30T01:02:06.712Z  INFO 1 --- [pool-2-thread-2] c.k8s.scheduler.client.KubernetesClient  : Node cpu02 was modified
+2024-03-30T01:02:08.922Z  INFO 1 --- [pool-2-thread-2] c.k8s.scheduler.client.KubernetesClient  : Node cpu03 was modified
+2024-03-30T01:02:10.225Z  INFO 1 --- [pool-2-thread-2] c.k8s.scheduler.client.KubernetesClient  : Node cpu09 was modified
+2024-03-30T01:02:11.532Z  INFO 1 --- [pool-2-thread-2] c.k8s.scheduler.client.KubernetesClient  : Node cpu08 was modified
+2024-03-30T01:02:11.991Z  INFO 1 --- [pool-2-thread-2] c.k8s.scheduler.client.KubernetesClient  : Node cpu07 was modified
+2024-03-30T01:02:12.157Z  INFO 1 --- [pool-2-thread-2] c.k8s.scheduler.client.KubernetesClient  : Node cpu06 was modified
+2024-03-30T01:02:12.653Z  INFO 1 --- [pool-2-thread-2] c.k8s.scheduler.client.KubernetesClient  : Node cpu01 was modified
+2024-03-30T01:02:15.114Z  INFO 1 --- [pool-2-thread-2] c.k8s.scheduler.client.KubernetesClient  : Node cpu10 was modified
+2024-03-30T01:02:16.900Z  INFO 1 --- [pool-2-thread-2] c.k8s.scheduler.client.KubernetesClient  : Node cpu02 was modified
+2024-03-30T01:02:19.184Z  INFO 1 --- [pool-2-thread-2] c.k8s.scheduler.client.KubernetesClient  : Node cpu03 was modified
+2024-03-30T01:02:20.521Z  INFO 1 --- [pool-2-thread-2] c.k8s.scheduler.client.KubernetesClient  : Node cpu09 was modified
+2024-03-30T01:02:21.609Z  INFO 1 --- [pool-2-thread-2] c.k8s.scheduler.client.KubernetesClient  : Node cpu08 was modified
+2024-03-30T01:02:22.276Z  INFO 1 --- [pool-2-thread-2] c.k8s.scheduler.client.KubernetesClient  : Node cpu07 was modified
+2024-03-30T01:02:22.488Z  INFO 1 --- [pool-2-thread-2] c.k8s.scheduler.client.KubernetesClient  : Node cpu06 was modified
+2024-03-30T01:02:22.994Z  INFO 1 --- [pool-2-thread-2] c.k8s.scheduler.client.KubernetesClient  : Node cpu01 was modified
+2024-03-30T01:02:25.400Z  INFO 1 --- [pool-2-thread-2] c.k8s.scheduler.client.KubernetesClient  : Node cpu10 was modified
+2024-03-30T01:02:27.265Z  INFO 1 --- [pool-2-thread-2] c.k8s.scheduler.client.KubernetesClient  : Node cpu02 was modified
+2024-03-30T01:02:28.950Z  INFO 1 --- [pool-2-thread-2] c.k8s.scheduler.client.KubernetesClient  : Pod has released its resources: nf-cc512eb4284bdaa6c590de7d945d7a15
+2024-03-30T01:02:29.368Z  INFO 1 --- [pool-2-thread-1] c.k8s.scheduler.client.KubernetesClient  : Node cpu03 was modified
+2024-03-30T01:02:30.847Z  INFO 1 --- [pool-2-thread-1] c.k8s.scheduler.client.KubernetesClient  : Node cpu09 was modified
+2024-03-30T01:02:30.931Z  INFO 1 --- [pool-2-thread-1] c.k8s.scheduler.client.KubernetesClient  : Node cpu09 was modified
+2024-03-30T01:02:30.943Z  INFO 1 --- [pool-2-thread-1] c.k8s.scheduler.client.KubernetesClient  : Node cpu09 was modified
+2024-03-30T01:02:31.433Z  INFO 1 --- [nio-8080-exec-7] c.k.s.rest.SchedulerRestController       : Delete scheduler: thirsty-avogadro
+2024-03-30T01:02:31.986Z  INFO 1 --- [pool-2-thread-1] c.k8s.scheduler.client.KubernetesClient  : Node cpu08 was modified
+2024-03-30T01:02:32.364Z  INFO 1 --- [pool-2-thread-1] c.k8s.scheduler.client.KubernetesClient  : Node cpu07 was modified
+2024-03-30T01:02:32.888Z  INFO 1 --- [pool-2-thread-1] c.k8s.scheduler.client.KubernetesClient  : Node cpu06 was modified
+2024-03-30T01:02:33.130Z  INFO 1 --- [pool-2-thread-1] c.k8s.scheduler.client.KubernetesClient  : Node cpu01 was modified
+2024-03-30T01:02:33.330Z  INFO 1 --- [pool-2-thread-1] c.k8s.scheduler.client.KubernetesClient  : Pod has released its resources: thirsty-avogadro
+2024-03-30T01:02:35.426Z  INFO 1 --- [pool-2-thread-1] c.k8s.scheduler.client.KubernetesClient  : Node cpu10 was modified
+2024-03-30T01:02:37.403Z  INFO 1 --- [pool-2-thread-1] c.k8s.scheduler.client.KubernetesClient  : Node cpu02 was modified
+2024-03-30T01:02:39.535Z  INFO 1 --- [pool-2-thread-1] c.k8s.scheduler.client.KubernetesClient  : Node cpu03 was modified
